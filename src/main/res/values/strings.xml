@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Solidsnake</string>
+    <string name="action_settings">Settings</string>
+    <string name="base_url">http://adm.solidsnake.club/</string>
+    <string name="facebook_app_id">463064844494193</string>
+    <string name="facebook_login_protocol_scheme">fb463064844494193</string>
+    <string name="yandex_app_id">4829203e-9c32-40f7-9d1f-11cf7d822672</string>
+    <string name="base_ref">test_ref.com</string>
+    <string name="app_flyer_id">T5LCtd4kVJQJ2pmWgvuAmd</string>
+    <string name="find_email_reg">([a-z0-9_.-]+)@([a-z0-9_.-]+[a-z])</string>
+    <string name="notification_error_ssl_cert_invalid">error_ssl</string>
+    <string name="error_internet_connection"><![CDATA[<html><body><div>
+  <b align="center">Ошибка в приложении возможно отсутствует интернет соединение или сервис в данный момент не доступен</b> </div></body>]]></string>
+    <string-array name="file">
+        <item>.html</item>
+        <item>.xhtml</item>
+        <item>.xml</item>
+        <item>.jpg</item>
+        <item>.png</item>
+        <item>.gif</item>
+        <item>.txt</item>
+        <item>.djv</item>
+    </string-array>
+    <string name="error_web_view_left">
+        <![CDATA[<html><body>
+        <div style="text-align: center;  position: absolute;
+    top: 50%;width:100%">
+    ]]>
+    </string>
+    <string name="error_wev_view_right"> <![CDATA[ </div></body> ]]></string>
+
+    <string name="error_wev_view_message">
+  <![CDATA[ <b align="center">Что то пошло не так <br/> %1$s</b> ]]></string>
+</resources>

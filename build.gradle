@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+
+
+android {
+    compileSdkVersion 29
+
+
+    defaultConfig {
+        manifestPlaceholders = [onesignal_app_id: "key",
+                                onesignal_google_project_number:  'REMOTE']
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+}
+def okhttp = "3.8.0"
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation "com.squareup.okhttp3:okhttp:$okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
+    implementation 'com.facebook.android:facebook-android-sdk:5.0.0'
+
+    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    implementation 'com.appsflyer:af-android-sdk:4.10.2@aar'
+    implementation 'com.android.installreferrer:installreferrer:1.0'
+    implementation 'com.yandex.android:mobmetricalib:3.6.4'
+    implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
+    implementation 'com.google.android.gms:play-services-gcm:11.0.2'
+//    implementation 'com.onesignal:OneSignal:3.+@aar'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
